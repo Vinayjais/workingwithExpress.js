@@ -14,6 +14,11 @@ const app = express();
 app.use(adminRoutes);
 app.use(shopRoutes);
 
+app.get( (req,res,next) => {
+   res.status(404);
+   res.send(`<h1>Page Not Found</h1>`);
+});
+
 
 
 
